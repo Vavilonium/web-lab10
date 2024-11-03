@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Company</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+<body>
+    <div class="main-div">
+        <!-- Первый блок с текстом и изображением -->
+        <div class="first-background">
+            <div class="header-section container">
+                <div class="text-box animate__animated animate__bounceInLeft">
+                    <img src="img/logo.png" alt="Logo">
+                    <h1>С помощью нас вы сможете создать то, о чем <span>желаете!</span></h1>
+                    <p>Наши возможности + опыт позволят Вам достичь огромного успеха. Мы верим в вас! И знаем это на все 100%. Вас не остановить!</p>
+                    <button>Узнать больше...</button>
+                </div>
+                <div class="image-box animate__animated animate__bounceInRight">
+                    <img src="img/header-img.png" alt="Phone Image">
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Три колонки -->
+        <div class="service-section container">
+            <div class="service-header">
+                <h1>Что Вам необходимо?</h2>
+            </div>
+            <div class="service-blocks">
+                <div class="service-block">
+                    <img src="img/f3.png" alt="Icon 1">
+                    <h3>Первый блок</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="service-block">
+                    <img src="img/f4.png" alt="Icon 2">
+                    <h3>Второй блок</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="service-block">
+                    <img src="img/f5.png" alt="Icon 3">
+                    <h3>Третий блок</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Форма заказа услуги -->
+        <div class="third-background">
+            <div class="form-section container">
+                <h1 id="firstHeader">Форма заказа услуги</h1>
+                <form action="#" method="post">
+                    <!-- Поле ФИО -->
+                    <label for="full_name">ФИО</label>
+                    <input type="text" name="full_name" id="full_name" placeholder="ФИО">
+
+                    <!-- Поле Номер телефона -->
+                    <label for="phone">Номер телефона</label>
+                    <input type="tel" name="phone" id="phone" placeholder="Номер телефона">
+
+                    <!-- Поле E-mail -->
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Электронная почта">
+
+                    <!-- Поле Способ оплаты -->
+                    <label for="payment_method">Способ оплаты</label>
+                    <select name="payment_method" id="payment_method">
+                        <option value="cash">Наличными</option>
+                        <option value="card">Картой</option>
+                        <option value="crypto">Криптовалютой</option>
+                    </select>
+
+                    <button type="submit">Заказать</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Модальное окно -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h2>Информация о заказе</h2>
+                <p>Спасибо за ваш заказ! Пожалуйста, проверьте данные:</p>
+                <ul>
+                    <li><strong>ФИО:</strong> <span id="modalFullName"></span></li>
+                    <li><strong>Телефон:</strong> <span id="modalPhone"></span></li>
+                    <li><strong>Email:</strong> <span id="modalEmail"></span></li>
+                    <li><strong>Способ оплаты:</strong> <span id="modalPayment"></span></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- Форма обратной связи -->
+        <div class="third-background">
+            <div class="form-section container">
+                <h1 id="secondHeader">Форма заказа обратного звонка</h2>
+                <form action="#" method="post">
+                    <input type="text" name="name" placeholder="Имя" required minlength="2" maxlength="50" pattern="[A-Za-zА-Яа-яЁё\s]+" title="Имя должно содержать только буквы и пробелы">
+                    <input type="email" name="email" placeholder="Электронная почта" required title="Введите корректный адрес электронной почты">
+                    <input type="tel" name="phone" placeholder="Телефон" required 
+                    pattern="^((\+7|7|8)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                    title="Введите номер телефона в формате +7 (999) 123-45-67 или 8 (999) 123-45-67">
+                    <input type="text" name="topic" placeholder="Какая тема вас интересует?" required minlength="3" maxlength="100" title="Тема запроса должна содержать от 3 до 100 символов">
+                    <button type="submit">Отправить вопрос!</button>
+                </form>
+            </div>
+        </div>
+        
+        
+        <!-- Нижняя часть -->
+        <div class="bottom-section">
+            <p>© Все на этом сайте защищено.</p>
+        </div>
+    </div>
+
+    <script src="js/validation.js"></script>
+    <script src="js/change.js"></script>
+</body>
+</html>
